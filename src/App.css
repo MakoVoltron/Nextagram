@@ -116,7 +116,7 @@ h1:hover {
 
 
 .img-container {
-  border: 1px yellow solid;
+  /* border: 1px yellow solid; */
   /* display: inline-block; */
   /* margin: auto; */
   width: calc(70vw /3);
@@ -270,7 +270,7 @@ h1:hover {
 .profileContainer2 {
   display: flex;
   justify-content: center;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   
 }
 

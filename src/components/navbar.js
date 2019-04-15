@@ -63,7 +63,26 @@ export default class MyNavbar extends React.Component {
             <Nav className="ml-auto" navbar>
               {
                 this.props.currentUser 
-                  ? <div className="nav-container"><div>Hello&nbsp;</div><div className="bold">{this.props.currentUser.username}</div> </div>
+                  ? <div className="nav-container"><div>Hello&nbsp;</div><div className="bold">{this.props.currentUser.username}</div> 
+                  
+                      <UncontrolledDropdown nav inNavbar>
+                        <DropdownToggle nav caret>
+                          Account
+                        </DropdownToggle>
+                        <DropdownMenu right>
+                    
+                        <DropdownItem tag={Link} to={'/profile'}>
+                          My Profile
+                        </DropdownItem>
+                    
+                        <DropdownItem divider />
+                        <DropdownItem onClick={()=>{this.logOut()}}>
+                          Log Out 
+                        </DropdownItem>
+                        </DropdownMenu>
+                      </UncontrolledDropdown>
+                  
+                  </div>
                   : <div className="nav-container">
                     <NavItem>
                       <LogInModal setUser={this.props.setUser} currentUser={this.props.currentUser}>
@@ -79,28 +98,6 @@ export default class MyNavbar extends React.Component {
                     </div>
               }
 
-              
-            
-              
-              
-
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Account
-                </DropdownToggle>
-                <DropdownMenu right>
-                  
-                <DropdownItem tag={Link} to={'/profile'}>
-                    My Profile
-                </DropdownItem>
-                  
-                  <DropdownItem divider />
-                  <DropdownItem onClick={()=>{this.logOut()}}>
-                    Log Out 
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-             
             </Nav>
           </Collapse>
         </Navbar>

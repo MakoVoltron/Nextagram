@@ -45,23 +45,10 @@ export default class LoginForm extends React.Component {
    this.props.toggle();
   }
   
-  
-
-
-  //*
   handleInput = event => {
     this.setState({[event.target.name]: event.target.value})
   }
 
-  //*
-  // LONGER VERSION OF THE SAME CODE ABOVE
-  // handleEmailInput = event => {
-  //   this.setState({ email: event.target.value})
-  // }
-
-  // handlePasswordInput = event => {
-  //   this.setState({ password: event.target.value})
-  // }
 
   render() {
     return (
